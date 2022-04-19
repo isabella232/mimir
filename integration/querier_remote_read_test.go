@@ -82,7 +82,7 @@ func TestQuerierRemoteRead(t *testing.T) {
 
 	req := &prompb.ReadRequest{
 		Queries:               []*prompb.Query{q},
-		AcceptedResponseTypes: []prompb.ReadRequest_ResponseType{prompb.ReadRequest_STREAMED_XOR_CHUNKS},
+		AcceptedResponseTypes: []prompb.ReadRequest_ResponseType{prompb.ReadRequest_SAMPLES},
 	}
 
 	data, err := proto.Marshal(req)
